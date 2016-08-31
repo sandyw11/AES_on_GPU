@@ -3,7 +3,7 @@
 This project contains the experiment results of three benchmarks, AES application in the GPGPU-sim, cache micro benchmark, and the AES benchmark used in the paper.
 
 
-1. AES application in the GPGPU-sim
+1.AES application in the GPGPU-sim
 
 The configuration of this application uses L1 and L2 caches. 
 
@@ -14,7 +14,7 @@ In the comparison of the results, the L2 cache miss rate is vary for different v
 The result of experiments without using L1 and L2 caches will be added.
 
 
-2. Cache micro benchmark
+2.Cache micro benchmark
 
 The configuration of the cache micro benchmark does not use L1 and L2 caches. 
 
@@ -26,7 +26,7 @@ In the simple version of cache micro benchmark, the cycle of using 32 threads is
 large gap. In the result of dis-77, it can be seen that the cycle is 1504, which is same as the execution time between using 32 threads with coalescing.
 
 
-3. AES benchmark of the paper
+3.AES benchmark of the paper
 
 The configuration of the AES benchmark of the paper does not use L1 and L2 caches. 
 
