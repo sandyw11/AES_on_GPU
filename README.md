@@ -4,7 +4,6 @@ This project contains the experiment results of three benchmarks, AES applicatio
 
 
 1.AES application in the GPGPU-sim
-
 The configuration of this application uses L1 and L2 caches. 
 
 Different values of the first key byte are set, including 0, 1, 2, 3, 4, 5, 6, 15, 31, 63, 127, 255. Coalescing means using the original AES application in the GPGPU-sim with coalescing. No coalescing means disabling the entire coalescing in the AES application. In the dynamic coalescing, a variable is set to be 16, which means 16 threads are using coalescing and the other 16 threads are without coalescing. 
@@ -15,7 +14,6 @@ The result of experiments without using L1 and L2 caches will be added.
 
 
 2.Cache micro benchmark
-
 The configuration of the cache micro benchmark does not use L1 and L2 caches. 
 
 As the number of threads increasing, the cycle of the benchmark increases with coalescing, while the cycle of the benchmark is stable without coalescing. However, the execution time(2609) without coalescing is much longer than using 32 threads with coalescing(1875). Same phenomenon can be seen in the results of global memory read(100 vs 65). The global memory write is stable both with and without coalescing. 
@@ -27,7 +25,6 @@ large gap. In the result of dis-77, it can be seen that the cycle is 1504, which
 
 
 3.AES benchmark of the paper
-
 The configuration of the AES benchmark of the paper does not use L1 and L2 caches. 
 
 32 threads are used during the execution of AES benchmark.
@@ -39,4 +36,3 @@ In the Comp file, it can be seen that the cycle(266820) of disabling coalescing 
 In the Read file, 256 values of the first key byte are set, from 0 to 255. The corresponding results of global read are compared between using coalescing, without coalescing and disabling coalescing in the last round. The correlation between different values of the first key byte and the global read using coalescing is about 0.11. Since the global read without coalescing is stable, its correlation with different values is 0. After disabling coalescing in the last round, the correlation is reduced to 0.009, which is only 8% of using coalescing. In this way, the correlation of different input values of the encryption key and global memory accesses are destroyed, which can protect AES encryption from attack of correct guessing the encryption key.
 
 In the Uniquecache file, the 12th byte of encrypt key is set to 12. I produce the scatter diagram of the unique cache line requests in the last round and the total execution time for 100 samples and get the fitting result using matlab, which is the Figure 7 in the paper. The fitting line has a slope of 7.79 cycles and offset of 264679 cycles. This demonstrates that the execution time of AES encryption has linear correlation with the unique cache line requests in the last round. 
-
