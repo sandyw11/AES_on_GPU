@@ -1,0 +1,8 @@
+ptxas info    : Compiling entry function '_Z10read_arrayi' for 'sm_20'
+ptxas info    : Function properties for _Z10read_arrayi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 6 registers, 36 bytes cmem[0], 56 bytes cmem[14]
+ptxas info    : Compiling entry function '_Z10cudaRunnerPhPm' for 'sm_20'
+ptxas info    : Function properties for _Z10cudaRunnerPhPm
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 34 registers, 48 bytes cmem[0], 56 bytes cmem[14]
