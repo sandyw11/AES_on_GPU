@@ -1,4 +1,4 @@
-# AES-on-GPU
+# AES_on_GPU
 
 This project contains the experiment results of three benchmarks, AES application in the GPGPU-sim, cache micro benchmark, and the AES benchmark used in the paper.
 
